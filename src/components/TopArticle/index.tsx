@@ -8,24 +8,29 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 // import required modules
-import { Pagination } from "swiper";
+import { Pagination, Navigation } from "swiper";
 
 const TopArticle = () => {
   return (
     <div className='container mx-auto px-10 py-[3rem]'>
       <Swiper
+        spaceBetween={50}
         pagination={{
           dynamicBullets: true,
-          clickable: true
+          clickable: true,
+            renderBullet: function (index, className) {
+              console.log(className)
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
+    },
         }}
-        spaceBetween={30}
-        
-        modules={[Pagination]}
+        navigation={true}
+        modules={[Navigation, Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide>
+        <SwiperSlide className='w-[20px] h-[20px] bg-red-500 rounded-xl'>
         <div className='max-w-full flex flex-col lg:flex-row'>
           <div className='h-[300px] lg:h-[400px] lg:basis-1/2 bg-cover bg-center bg-no-repeat' style={{backgroundImage: `url(${"https://preview.colorlib.com/theme/meranda/images/big_img_1.jpg.webp"})`}}>
           </div>

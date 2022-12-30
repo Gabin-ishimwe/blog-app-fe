@@ -48,7 +48,7 @@ const Header = () => {
   return (
     <React.Fragment>
     <div className='container mx-auto flex lg:block justify-between items-start relative'>
-    <div className='flex space-y-4 lg:space-y-0 flex-col lg:flex-row lg:justify-between lg:items-center my-8 mx-5'>
+    <div className='flex space-y-4 lg:space-y-0 flex-col lg:flex-row lg:justify-between lg:items-center my-8 mx-10'>
       <Link href={"/"} className="text-2xl sm:text-3xl font-bold hover:text-[#8bc34a] transition duration-[500ms]">My Mind Unwrapped</Link>
       <div className='flex flex-col sm:flex-row sm:items-center space-y-5 sm:space-y-0 sm:space-x-5'>
         <div className='flex items-center space-x-6'>
@@ -83,7 +83,7 @@ const Header = () => {
     }
     </div>
     <div className='hidden lg:block'>
-      <div className='container mx-auto flex items-center space-x-12 px-5 py-5'>
+      <div className='container mx-auto flex items-center space-x-12 px-10 py-5'>
         {
           links.map((link) => (
             <Link href={link.path} key={link.link} className="uppercase font-normal text-sm hover:text-[#8bc34a] transition duration-[500ms]">{link.link}</Link>

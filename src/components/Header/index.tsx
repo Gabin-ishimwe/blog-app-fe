@@ -49,7 +49,7 @@ const Header = () => {
     <React.Fragment>
     <div className='container mx-auto flex lg:block justify-between items-start relative'>
     <div className='flex space-y-4 lg:space-y-0 flex-col lg:flex-row lg:justify-between lg:items-center my-8 mx-10'>
-      <Link href={"/"} className="text-2xl sm:text-3xl font-bold hover:text-[#8bc34a] transition duration-[500ms]">My Mind Unwrapped</Link>
+      <Link href={"/"} className="text-2xl sm:text-3xl font-bold hover:text-[#8bc34a] transition duration-[600ms]">My Mind Unwrapped</Link>
       <div className='flex flex-col sm:flex-row sm:items-center space-y-5 sm:space-y-0 sm:space-x-5'>
         <div className='flex items-center space-x-6'>
             <FaGithub className=''/>
@@ -58,7 +58,7 @@ const Header = () => {
         </div>
         <form className='flex items-center space-x-2'>
           <input type={"text"} placeholder={"Search..."} className="w-[75%] px-4 py-2 rounded-full drop-shadow-lg focus:outline-none"/>
-          <button className='bg-black hover:bg-[#8bc34a] transition duration-[500ms] py-4 px-5 rounded-full'>
+          <button className='bg-black hover:bg-[#8bc34a] transition duration-[600ms] py-4 px-5 rounded-full'>
               <FaSearch className='text-white text-sm'/>
           </button>
         </form>
@@ -75,14 +75,14 @@ const Header = () => {
       </button>
     {/* <div className='flex lg:hidden flex-col space-y-5 w-1/2'> */}
       {links.map((link) => (
-        <Link href={link.path} key={link.link} className="capitalize font-normal text-xl hover:text-[#8bc34a] transition duration-[500ms]">{link.link}</Link>
+        <Link href={link.path} key={link.link} className="capitalize font-normal text-xl hover:text-[#8bc34a] transition duration-[600ms]">{link.link}</Link>
       ))}
     {/* </div> */}
     </nav>
       )
     }
     </div>
-    <div className='hidden lg:block'>
+    <div className='hidden lg:block sticky top-0'>
       <div className='container mx-auto flex items-center space-x-12 px-10 py-5'>
         {
           links.map((link) => (

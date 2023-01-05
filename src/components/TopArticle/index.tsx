@@ -10,7 +10,7 @@ import * as ReactDOMServer from "react-dom/server";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
+// import "swiper/css/pagination";
 
 // import required modules
 import { Pagination, Navigation } from "swiper";
@@ -25,6 +25,9 @@ const TopArticle = () => {
         pagination={{
           dynamicBullets: true,
           clickable: true,
+        }}
+        autoplay={{
+          delay: 3000
         }}
         navigation={true}
         modules={[Navigation, Pagination]}
@@ -45,7 +48,7 @@ const TopArticle = () => {
               <p>Dave Rogers <span className='text-gray-500'>in</span> Food</p>
               <div className='flex items-center space-x-1 text-sm text-gray-500'>
               <p className=''>Jun 14 . 3 min read</p>
-              <FaStar className='text-sm'/>
+              <FaStar className='pl-1'/>
               </div>
               </div>
             </div>
@@ -63,7 +66,7 @@ const TopArticle = () => {
               <p>Dave Rogers <span className='text-gray-500'>in</span> Food</p>
               <div className='flex items-center space-x-1 text-sm text-gray-500'>
               <p className=''>Jun 14 . 3 min read</p>
-              <FaStar className='text-sm'/>
+              <FaStar className='pl-1'/>
               </div>
               </div>
             </div>
@@ -71,7 +74,8 @@ const TopArticle = () => {
         </SwiperSlide>
       </Swiper> 
         <button onClick={() => swiperRef.current?.slidePrev()} className="absolute top-0 left-0 mt-[230px]"><FaArrowLeft className='text-xl text-gray-500'/></button>
-        <button onClick={() => swiperRef.current?.slideNext()} className="absolute top-0 right-0 mt-[230px]"><FaArrowRight className='text-xl text-gray-500'/></button>    </div>
+        <button onClick={() => swiperRef.current?.slideNext()} className="absolute top-0 right-0 mt-[230px]"><FaArrowRight className='text-xl text-gray-500'/></button>    
+      </div>
   )
 }
 

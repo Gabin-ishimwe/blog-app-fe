@@ -35,7 +35,7 @@ const Header = () => {
     },
     {
       link: "contact",
-      path: "/home"
+      path: "/contact"
     },
   ]
   const [active, setActive] = React.useState(false);

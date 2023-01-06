@@ -69,7 +69,7 @@ const Header = () => {
     </button>
     {
       active && (
-    <nav className='fixed inset-0 left-1/2 flex flex-col space-y-5 items-center pt-10 bg-white shadow-2xl'>
+    <nav className='fixed inset-0 left-1/2 flex flex-col space-y-5 items-center pt-10 bg-white shadow-2xl z-10'>
       <button className='lg:hidden'>
         <FaTimes className='text-3xl' onClick={closeMenu}/>
       </button>

@@ -3,7 +3,11 @@ import React from 'react'
 import Footer from '../Footer'
 import Header from '../Header'
 
-const Categories = ({categories}) => {
+type Props = {
+    categories: any
+}
+
+const Categories = ({categories}:Props) => {
   return (
     <React.Fragment>
         <Header/>
@@ -11,17 +15,10 @@ const Categories = ({categories}) => {
         <h2 className='underline underline-offset-4 text-xl pb-8'>Categories</h2> 
         <div className='grid grid-cols-1  sm:grid-cols-3 lg:grid-cols-4 gap-6'>
             {
-                categories.map((cat) => (
+                categories.map((cat:any) => (
                     <Link href={cat.path} className="w-full p-5 shadow-lg hover:text-[#8bc34a] transition duration-[600ms]" key={cat.name}>{cat.name}</Link>
                 ))
             }
-            {/* <Link href={"#"} className="w-full p-5 shadow-lg hover:text-[#8bc34a] transition duration-[600ms]">Politics</Link>
-            <Link href={"#"} className="w-full p-5 shadow-lg hover:text-[#8bc34a] transition duration-[600ms]">Politics</Link>
-            <Link href={"#"} className="w-full p-5 shadow-lg hover:text-[#8bc34a] transition duration-[600ms]">Politics</Link>
-            <Link href={"#"} className="w-full p-5 shadow-lg hover:text-[#8bc34a] transition duration-[600ms]">Politics</Link>
-            <Link href={"#"} className="w-full p-5 shadow-lg hover:text-[#8bc34a] transition duration-[600ms]">Politics</Link>
-            <Link href={"#"} className="w-full p-5 shadow-lg hover:text-[#8bc34a] transition duration-[600ms]">Politics</Link>
-            <Link href={"#"} className="w-full p-5 shadow-lg hover:text-[#8bc34a] transition duration-[600ms]">Politics</Link> */}
         </div>
         </div>
         <Footer/>

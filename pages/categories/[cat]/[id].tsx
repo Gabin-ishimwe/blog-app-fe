@@ -1,7 +1,7 @@
 import React from 'react'
 import SinglePage from '../../../src/components/SinglePage';
 
-const ReadArticle = ({category}) => {
+const ReadArticle = ({category}:{category:any}) => {
   return (
     <SinglePage category={category}/>
   )
@@ -54,7 +54,7 @@ export function getStaticPaths() {
     }
 }
 
-export function getStaticProps(context) {
+export function getStaticProps(context: { params: { id: string; }; }) {
     const data = links.find(article => article.id == context.params.id)
     return{
         props: {

@@ -12,7 +12,7 @@ const urls = [
     "sports"
 ]
 
-const OneCategory = ({title}) => {
+const OneCategory = ({title}: {title:string}) => {
   return (
     <React.Fragment>
         <Header/>
@@ -160,7 +160,7 @@ export function getStaticPaths() {
     }
 }
 
-export function getStaticProps(context) {
+export function getStaticProps(context: { params: { cat: any } }) {
     const id = context.params.cat;
     const data = urls.find((cat) => cat == id);
     return {

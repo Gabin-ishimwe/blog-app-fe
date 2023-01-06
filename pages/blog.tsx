@@ -3,7 +3,7 @@ import SinglePage from '../src/components/SinglePage'
 
 const BlogPage = () => {
   return (
-    <SinglePage/>
+    <SinglePage category={"any"}/>
   )
 }
 

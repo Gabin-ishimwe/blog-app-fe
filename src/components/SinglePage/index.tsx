@@ -4,7 +4,7 @@ import { FaStar, FaAngleRight } from 'react-icons/fa'
 import Footer from '../Footer'
 import Header from '../Header'
 
-const SinglePage = ({category}) => {
+const SinglePage = ({category}:{category:any}) => {
   return (
     <React.Fragment>
         <Header/>

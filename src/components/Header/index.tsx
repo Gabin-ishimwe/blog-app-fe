@@ -82,11 +82,11 @@ const Header = () => {
       )
     }
     </div>
-    <div className='hidden lg:block sticky top-0'>
+    <div className='hidden lg:block sticky top-0 bg-white z-10'>
       <div className='container mx-auto flex items-center space-x-12 px-10 py-5'>
         {
           links.map((link) => (
-            <Link href={link.path} key={link.link} className="uppercase font-normal text-sm hover:text-[#8bc34a] transition duration-[500ms]">{link.link}</Link>
+            <Link href={link.path} key={link.link} className="uppercase font-normal text-sm hover:text-[#8bc34a] transition duration-[600ms]">{link.link}</Link>
 
           ))
         }

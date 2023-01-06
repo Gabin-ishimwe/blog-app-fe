@@ -6,7 +6,7 @@ const ArticleSection = () => {
   return (
     <div className='container mx-auto px-10 flex flex-col lg:flex-row space-y-4 lg:space-x-4 pb-[3rem]'>
         <div className='lg:basis-3/4'>
-            <h2 className='underline underline-offset-4 text-xl pb-5'>Editor&apos;s Pick</h2>
+            <h2 className='underline underline-offset-4 text-xl pb-8'>Editor&apos;s Pick</h2>
             <div className='w-full flex flex-col space-y-6 md:flex-row md:space-x-6 md:space-y-0'>
               <div className='md:basis-1/2'>
                 <div className='bg-cover bg-center bg-no-repeat h-[174px] w-full mb-8' style={{backgroundImage: `url(${"https://preview.colorlib.com/theme/meranda/images/img_h_1.jpg"})`}}>
@@ -68,7 +68,7 @@ const ArticleSection = () => {
             </div>
         </div>
         <div className='lg:basis-1/4'>
-        <h2 className='underline underline-offset-4 text-xl pb-5'>Trending</h2>
+        <h2 className='underline underline-offset-4 text-xl pb-8'>Trending</h2>
         <div className='w-full flex flex-col space-y-4'>
           <div className='w-full flex flex-row space-x-5'>
             <div className=''>

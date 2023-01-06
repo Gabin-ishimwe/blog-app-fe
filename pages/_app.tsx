@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app'
 import {Cabin} from "@next/font/google"
 // import "../styles/style.css"
 
-const cabin = Cabin({subset: ["latin"]})
+const cabin = Cabin({subsets: ["latin"]})
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

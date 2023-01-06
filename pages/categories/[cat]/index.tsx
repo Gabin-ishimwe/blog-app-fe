@@ -1,15 +1,28 @@
 import Link from 'next/link'
 import React from 'react'
-import { FaAngleRight, FaStar } from 'react-icons/fa'
+import { FaStar, FaAngleRight } from 'react-icons/fa'
+import Footer from '../../../src/components/Footer'
+import Header from '../../../src/components/Header'
 
-const RecentArticles = () => {
+const urls = [
+    "politics",
+    "health",
+    "business",
+    "design",
+    "sports"
+]
+
+const OneCategory = ({title}) => {
   return (
-    <div className='container mx-auto px-10 pb-[3rem] flex flex-col space-y-4 lg:space-y-0 lg:flex-row lg:space-x-8'>
+    <React.Fragment>
+        <Header/>
+        <div className='container mx-auto my-10 px-10 flex flex-col space-y-4 lg:space-y-0 lg:flex-row lg:space-x-8'>
     <div className='lg:basis-3/4'>
-    <h2 className='underline underline-offset-4 text-xl pb-8'>Recent Articles</h2> 
+        <p className='font-[100] uppercase text-xs'>Categories</p>
+    <h2 className='underline underline-offset-4 text-xl pb-8'>{title}</h2> 
 <div className='w-full flex flex-row mb-6'>
     <div className='bg-gray-50 basis-3/4 py-[10px] px-[20px]'>
-    <Link href={"#"} className='sm:text-lg'>News Need to Meet its Audiences Where they are</Link>
+    <Link href={"/categories/politics/1"} className='sm:text-lg'>News Need to Meet its Audiences Where they are</Link>
     <p className='text-gray-500 pt-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
     <div className='text-sm pt-5'>
     <p>Dave Rogers <span className='text-gray-500'>in</span> Food</p>
@@ -126,7 +139,33 @@ const RecentArticles = () => {
           </div>
         </div>
     </div>
+        <Footer/>
+    </React.Fragment>
   )
 }
 
-export default RecentArticles
+export default OneCategory;
+
+export function getStaticPaths() {
+    const allPaths = urls.map(url => (
+        {
+            params: {
+                cat: url
+            }
+        }
+    ))
+    return {
+        paths: [...allPaths],
+        fallback: false
+    }
+}
+
+export function getStaticProps(context) {
+    const id = context.params.cat;
+    const data = urls.find((cat) => cat == id);
+    return {
+        props: {
+            title: data?.toUpperCase()
+        }
+    }
+}

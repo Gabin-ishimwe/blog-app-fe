@@ -4,7 +4,7 @@ import { FaStar, FaAngleRight } from 'react-icons/fa'
 import Footer from '../Footer'
 import Header from '../Header'
 
-const SinglePage = () => {
+const SinglePage = ({category}) => {
   return (
     <React.Fragment>
         <Header/>
@@ -30,7 +30,7 @@ const SinglePage = () => {
                     <p className='pb-5'>Blanditiis, ipsum sed odio reprehenderit sequi ut vitae, dolor minima ab! Architecto nesciunt nemo sint est aspernatur fugit consequatur, magnam suscipit asperiores illo eum repellendus officia dolorem, molestiae commodi nam voluptatem quis quia vel cumque quos, aliquam ex incidunt sapiente!</p>
                     <p className='pb-5'>Suscipit, officiis, vero! Perferendis accusamus quos voluptatum culpa, provident maiores! Illo itaque ullam fugit molestiae, eaque accusamus impedit autem numquam. Placeat molestias tempore eaque ipsam vel voluptatum velit enim quam iusto maxime delectus, sint sapiente ea, quo excepturi nisi! Quia.</p>
                 </div>
-                <p className='text-gray-500'>Categories: <span className='text-[#8bc34a]'>Design, Events</span> Tags: <span className='text-[#8bc34a]'>#cooking, #recipe</span></p>
+                <p className='text-gray-500'>Categories: <span className='text-[#8bc34a]'>{category}</span> Tags: <span className='text-[#8bc34a]'>#cooking, #recipe</span></p>
 
                 <div className='my-8'>
                 <h2 className='underline underline-offset-4 text-xl pb-8'>3 Comments</h2>

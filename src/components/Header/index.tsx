@@ -7,31 +7,31 @@ const Header = () => {
   const links = [
     {
       link: "home",
-      path: "/home"
+      path: "/"
     },
     {
       link: "categories",
-      path: "/home"
+      path: "/categories"
     },
     {
       link: "politics",
-      path: "/home"
+      path: "/categories/politics"
     },
     {
       link: "business",
-      path: "/home"
+      path: "/categories/business"
     },
     {
       link: "health",
-      path: "/home"
+      path: "/categories/health"
     },
     {
       link: "design",
-      path: "/home"
+      path: "/categories/design"
     },
     {
       link: "sports",
-      path: "/home"
+      path: "/categories/sports"
     },
     {
       link: "contact",

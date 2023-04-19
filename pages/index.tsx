@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>My Mind UnWrapped</title>
+        <title>My Mind Unfolding...</title>
         <meta name="description" content="Gabin's Blog App in Next js" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
